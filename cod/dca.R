@@ -106,6 +106,9 @@ points(x=bp,y=as.numeric(descriptiva$nitrogeno[,"Media"]),pch=18,cex=1.5,col=col
 # Mediana: triángulo
 points(x=bp,y=as.numeric(descriptiva$nitrogeno[,"Mediana"]),pch=17,cex=1.1,col=color_mediana)
 
+# Leyenda
+legend("topright",legend=c("Media","Mediana","Datos individuales","IC 95%"),pch=c(18,17,21,NA),lty=c(NA,NA,NA,1),
+col=c(color_media,color_mediana,color_datos,"gray30"),bty="n",cex=0.8)
 
 #Fig 1. Grafico descriptivo para el contenido de Nitrogeno en 6 tratamientos de cepas de Rhizobium.
 #Las barras indican la media del tratamiento.
@@ -113,9 +116,7 @@ points(x=bp,y=as.numeric(descriptiva$nitrogeno[,"Mediana"]),pch=17,cex=1.1,col=c
 #Los puntos representan las observaciones individuales.
 #Las barras de error indican los limites del intervalo de confianza al 95%.
 
-# Leyenda
-legend("topright",legend=c("Media","Mediana","Datos individuales","IC 95%"),pch=c(18,17,21,NA),lty=c(NA,NA,NA,1),
-col=c(color_media,color_mediana,color_datos,"gray30"),bty="n",cex=0.8)
+
 
 dev.off()
 names(datosexcel)
