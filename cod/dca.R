@@ -12,7 +12,7 @@ dir.create(file.path(".","cod"),showWarnings = FALSE, recursive=TRUE)
 
 #Datos
 library(readxl)
-datosexcel<-read_excel(file.path(".","BD","dca.xlsx"))
+datosexcel<-readxl::read_excel(file.path(".","BD","dca.xlsx"))
 datosexcel<-as.data.frame(datosexcel)
 datosexcel$tratamiemto_f<-as.factor(datosexcel$tratamiento)
 str(datosexcel)
