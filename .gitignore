@@ -7,3 +7,6 @@ Thumbs.db
 *.bak
 *~
 *.log
+
+#salida
+/salidas
